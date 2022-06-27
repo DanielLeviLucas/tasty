@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list of all recipes</title>
+</head>
+<body>
+    <h1>list of all recipes</h1>
+    <p>{{recipes}}</p>
+    <ul>
+    {% for recipe in recipes %}
+        <li>
+            <img src="media/users/2022/06/27/default_15TlK7N.png" alt="Recipe image">
+            <p>
+                <br>
+                {{ recipe.image.url }} <br>
+                {{ recipe.title }} <br>
+                {{ recipe.author }} <br>
+                {{ recipe.type }} <br>
+                {{ recipe.cuisine }} <br>
+                difficulty {{ recipe.difficulty }} <br>
+                {{ recipe.ingredients }} <br>
+                {{ recipe.instructions }} <br>
+                {{ recipe.servings }} <br>
+                {{ recipe.preparation_time }} <br>
+                {{ recipe.total_time }} <br>
+                {{ recipe.calories }} <br>
+            </p>
+        </li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
