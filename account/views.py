@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .forms import UserRegistrationForm
-from .models import Profile
 # Create your views here.
 
 
@@ -11,7 +10,6 @@ def register(request):
         new_user.set_password(
             user_registration_form.cleaned_data['password'])
         new_user.save()
-        Profile.objects.create(user=new_user)
         return render(request,
                       'account/user/register_done.html',
                       {'new_user': new_user})
