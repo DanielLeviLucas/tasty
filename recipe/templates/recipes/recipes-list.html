@@ -12,7 +12,7 @@
     <ul>
     {% for recipe in recipes %}
         <li>
-            <img src="{{ recipe.image.url }}" alt="">
+            <img src="{{ recipe.image.url }}" alt="img">
             <p>
                 <br>
                 {{ recipe.image.url }} <br>
@@ -27,6 +27,12 @@
                 {{ recipe.preparation_time }} <br>
                 {{ recipe.total_time }} <br>
                 {{ recipe.calories }} <br>
+                {% for ingredient in recipe.recipe_ingredients.all %}
+                    {{ ingredient }} <br>
+                    name : {{ ingredient.name }} <br>
+                    quantity: {{ ingredient.quantity }} {{ ingredient.measurement }} <br>
+                    optional: {{ ingredient.optional }} <br> <br> <br>
+                {% endfor %}
             </p>
         </li>
     {% endfor %}
