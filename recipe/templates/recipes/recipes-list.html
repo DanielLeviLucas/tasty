@@ -12,7 +12,7 @@
     <ul>
     {% for recipe in recipes %}
         <li>
-            <img src="media/users/2022/06/27/default_15TlK7N.png" alt="Recipe image">
+            <img src="{{ recipe.image.url }}" alt="">
             <p>
                 <br>
                 {{ recipe.image.url }} <br>
