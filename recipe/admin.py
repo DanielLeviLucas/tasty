@@ -20,7 +20,6 @@ class ReceipeAdmin(admin.ModelAdmin):
                     'servings', 'preparation_time', 'total_time',
                     'calories']
     search_fields = ('title', 'author', 'type')
-    prepopulated_fields = {'slug': ('title',)}
     inlines = [IngredientInline]
 
 
