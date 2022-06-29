@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard | Tasty{% endblock title %}
+{% block content %}
+    <p>Dashboard</p>
+{% endblock content %}

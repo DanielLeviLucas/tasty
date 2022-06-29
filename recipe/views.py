@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from .models import Recipe, Ingredient, Cuisine
-# Create your views here.
 
 
 def testPage(request):
@@ -8,6 +7,11 @@ def testPage(request):
     return render(request,
                   'recipes/recipe/testPage.html',
                   {'greet': greet})
+
+
+def dashboard(request):
+    return render(request,
+                  'recipes/recipe/dashboard',)
 
 
 def list_recipes(request):
