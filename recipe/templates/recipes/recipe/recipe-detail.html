@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}{{ object.title}} | Tasty{% endblock title %}
+
+{% block content %}
+<ul>
+        <li>
+            <img src="{{ recipe.image.url }}" alt="img">
+            <p>
+                <br>
+                {{ recipe.image.url }} <br>
+                {{ recipe.title }} <br>
+                {{ recipe.author }} <br>
+                {{ recipe.type }} <br>
+                {{ recipe.cuisine }} <br>
+                difficulty {{ recipe.difficulty }} <br>
+                {{ recipe.ingredients }} <br>
+                {{ recipe.instructions }} <br>
+                {{ recipe.servings }} <br>
+                {{ recipe.preparation_time }} <br>
+                {{ recipe.total_time }} <br>
+                {{ recipe.calories }} <br>
+                {% for ingredient in recipe.recipe_ingredients.all %}
+                    {{ ingredient }} <br>
+                    name : {{ ingredient.name }} <br>
+                    quantity: {{ ingredient.quantity }} {{ ingredient.measurement }} <br>
+                    optional: {{ ingredient.optional }} <br> <br> <br>
+
+            </p>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock content %}
