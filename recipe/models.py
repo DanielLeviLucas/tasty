@@ -27,7 +27,7 @@ class Recipe(TimeStampedModel):
     image = models.ImageField(upload_to='users/%Y/%m/%d/', blank=True)
     cuisine = models.ManyToManyField(Cuisine, related_name='style_of_cooking')
     difficulty = models.IntegerField(validators=[
-        MinValueValidator(1), MaxValueValidator(10)])
+        MinValueValidator(1), MaxValueValidator(5)])
     instructions = models.TextField()
     servings = models.IntegerField(validators=[
         MinValueValidator(1), MaxValueValidator(10)])
