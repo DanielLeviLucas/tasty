@@ -51,8 +51,6 @@ def createRecipe(request):
 
     if recipe_form.is_valid() and formset.is_valid():
         recipe_instance = recipe_form.save(commit=False)
-        print(recipe_instance.title,
-              end="\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n33333333333333333333333333333333333333333333333333333333333333")
         recipe_instance.author = get_object_or_404(User, pk=request.user.pk)
         recipe_instance.save()
         for form in formset:
