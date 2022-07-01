@@ -28,9 +28,9 @@
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 {% if request.user.username  %}
                 <a
-                  href="#"
+                  href="{% url "recipe:dashboard" %}"
                   class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >Dashboard {{ request.user.username }}</a
+                  >Dashboard {{ request.user.username }} {{ request.user.pk }}</a
                 >
                 {% endif %}
                 <a

@@ -1,3 +1,4 @@
+from .forms import RecipeModelForm, IngredientFormset
 from django.views.generic.list import ListView
 from django.shortcuts import render
 from .models import Recipe, Ingredient, Cuisine
@@ -6,9 +7,10 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import CreateView, FormView
-from .forms import RecipeForm, IngredientForm
 from django.shortcuts import redirect
 from .filters import RecipeFilter
+from django.contrib.auth.models import User
+from django.shortcuts import get_object_or_404
 
 
 def testPage(request):
@@ -42,23 +44,28 @@ class RecipeDetailView(DetailView):
 
 
 def createRecipe(request):
-    if request.method == 'POST':
-        recipe_form = RecipeForm(request.POST or None)
-        ingredient_form = IngredientForm(request.POST or None)
-        if recipe_form.is_valid() and ingredient_form.is_valid():
-            recipe = recipe_form.save()
-            ingredient = ingredient_form.save(commit=False)
+    template_name = 'recipes/recipe/create-recipe.html'
 
-            ingredient.recipe = recipe
-            ingredient.save()
+    recipe_form = RecipeModelForm(request.POST or None, request.FILES)
+    formset = IngredientFormset(request.POST or None)
 
-            return redirect('recipe:dashboard')
+    if recipe_form.is_valid() and formset.is_valid():
+        recipe_instance = recipe_form.save(commit=False)
+        print(recipe_instance.title,
+              end="\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n33333333333333333333333333333333333333333333333333333333333333")
+        recipe_instance.author = get_object_or_404(User, pk=request.user.pk)
+        recipe_instance.save()
+        for form in formset:
+            ingredient_instance = form.save(commit=False)
+            ingredient_instance.recipe = recipe_instance
+            ingredient_instance.save()
+        return redirect('recipe:list-recipes')
 
-    else:
-        recipe_form = RecipeForm()
-        ingredient_form = IngredientForm()
+    recipe_form = RecipeModelForm(request.GET)
+    formset = IngredientFormset(queryset=Recipe.objects.none())
 
-    return render(request,
-                  'recipes/recipe/create-recipe.html',
-                  {'recipe_form': recipe_form,
-                   'ingredient_form': ingredient_form})
+    context = {}
+    context['recipe_form'] = recipe_form
+    context['formset'] = formset
+
+    return render(request, template_name, context)

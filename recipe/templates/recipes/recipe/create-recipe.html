@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Create recipe | Tasty{% endblock title %}
+
+{% block content %}
+    <form action="{% url "recipe:create-recipe" %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div>
+            {{ recipe_form.as_p }}
+        </div>
+        <br><br><br>
+        Ingredients
+        {{ formset.management_form }}
+        {% for form in formset %}
+            {{ form.as_p }}<br><br><br><br>
+        {% endfor %}
+
+        <button type="submit">Create</button>
+    </form>
+{% endblock content %}
