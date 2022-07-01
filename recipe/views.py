@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views.generic.edit import CreateView, FormView
+from django.views.generic.edit import CreateView, FormView, DeleteView
 from django.shortcuts import redirect
 from .filters import RecipeFilter
 from django.contrib.auth.models import User
@@ -67,3 +67,10 @@ def createRecipe(request):
     context['formset'] = formset
 
     return render(request, template_name, context)
+
+
+class RecipeDeleteView(DeleteView):
+    model = Recipe
+    template_name = 'recipes/recipe/recipe_confirm_delete.html'
+
+    success_url = reverse_lazy('recipe:list-recipes')
