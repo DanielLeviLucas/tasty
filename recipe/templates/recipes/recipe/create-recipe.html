@@ -1,20 +1,32 @@
 {% extends "base.html" %}
 
+{% load tailwind_filters %}
+
 {% block title %}Create recipe | Tasty{% endblock title %}
 
 {% block content %}
-    <form action="{% url "recipe:create-recipe" %}" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        <div>
-            {{ recipe_form.as_p }}
-        </div>
-        <br><br><br>
-        Ingredients
-        {{ formset.management_form }}
-        {% for form in formset %}
-            {{ form.as_p }}<br><br><br><br>
-        {% endfor %}
+    <div class="flex mb-16 items-center justify-center min-h-screen bg-gray-100">
+        <form
+            action="{% url "recipe:create-recipe" %}"
+            method="post" enctype="multipart/form-data"
+            class="space-y-8 divide-y divide-gray-200"
+        >
+            {% csrf_token %}
 
-        <button type="submit">Create</button>
-    </form>
+            {{ recipe_form|crispy }}
+
+            <h2>Ingredients</h2>
+
+            {{ formset.management_form }}
+
+            {% for form in formset %}
+                {{ form|crispy }}
+            {% endfor %}
+
+            <button type="submit"
+                    class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            >Create
+            </button>
+        </form>
+    </div>
 {% endblock content %}
