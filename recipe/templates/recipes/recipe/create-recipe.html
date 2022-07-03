@@ -19,14 +19,67 @@
 
             {{ formset.management_form }}
 
-            {% for form in formset %}
-                {{ form|crispy }}
-            {% endfor %}
+            <div id="ingredient-form-list">
+                {% for form in formset %}
+                    <div class="ingredient-form">
+                        {{ form|crispy }}
+                    </div>
+                {% endfor %}
+            </div>
 
-            <button type="submit"
+            <div id="empty-form"
+                 class="hidden"
+            >
+                    {{ formset.empty_form }}
+            </div>
+
+            <div class="mb-10">
+                <button type="button"
+                        id="add-more-ingredient"
+                        class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >Add ingredients
+                </button>
+            </div>
+
+            <button
+                    type="submit"
                     class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             >Create
             </button>
         </form>
     </div>
+
+    <script type="text/javascript">
+        const addMoreIngredientButton = document.getElementById("add-more-ingredient");
+
+        const totalNewForms = document.getElementById("id_form-TOTAL_FORMS");
+
+        addMoreIngredientButton.addEventListener("click", (event) => {
+          if (event) {
+            event.preventDefault();
+          }
+          const currentIngredientForms =
+            document.getElementsByClassName("ingredient-form");
+
+          let currentFormCount = currentIngredientForms.length;
+
+          const copyEmptyIngredientFormElement = document
+            .getElementById("empty-form")
+            .cloneNode(true);
+
+          copyEmptyIngredientFormElement.setAttribute("class", "ingredient-form mb-6");
+          copyEmptyIngredientFormElement.setAttribute("id", `form-${currentFormCount}`);
+
+          const regex = new RegExp("__prefix__", "g");
+
+          const formCopyTarget = document.getElementById("ingredient-form-list");
+          copyEmptyIngredientFormElement.innerHTML =
+            copyEmptyIngredientFormElement.innerHTML.replace(regex, currentFormCount);
+
+          totalNewForms.setAttribute("value", currentFormCount + 1);
+
+          formCopyTarget.append(copyEmptyIngredientFormElement);
+        });
+
+    </script>
 {% endblock content %}

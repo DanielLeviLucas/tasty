@@ -15,5 +15,5 @@ class RecipeModelForm(forms.ModelForm):
 IngredientFormset = modelformset_factory(Ingredient,
                                          fields=('name', 'quantity',
                                                  'measurement', 'optional'),
-                                         extra=3,
+                                         extra=0,
                                          can_delete=True)
