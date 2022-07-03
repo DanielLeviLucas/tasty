@@ -9,6 +9,7 @@ django-tailwind = "*"
 pillow = "*"
 django-model-utils = "*"
 django-filter = "*"
+crispy-tailwind = "*"
 
 [dev-packages]
 autopep8 = "*"
