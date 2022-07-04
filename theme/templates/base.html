@@ -35,9 +35,16 @@
                 {% endif %}
                 <a
                   href="{% url "recipe:list-recipes" %}"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
                   >Explore</a
                 >
+                {% if request.user.username  %}
+                <a
+                  href="{% url "recipe:create-collection" %}"
+                  class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >Collections</a
+                >
+                {% endif %}
               </div>
             </div>
           </div>
@@ -208,6 +215,11 @@
             href="#"
             class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >Explore</a
+          >
+          <a
+            href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >Collection</a
           >
         </div>
         <div class="pt-4 pb-3 border-t border-gray-700">

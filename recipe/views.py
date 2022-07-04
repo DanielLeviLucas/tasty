@@ -1,16 +1,19 @@
-from .forms import RecipeModelForm, IngredientFormset
+from django.views.generic.base import TemplateResponseMixin, View
+from .forms import RecipeModelForm, IngredientFormset, CollectionModelForm
+from django.forms.models import modelformset_factory
 from django.views.generic.list import ListView
 from django.shortcuts import render
-from .models import Recipe, Ingredient, Cuisine
-from django.urls import reverse_lazy
+from .models import Recipe, Ingredient, Collection
+from django.urls import reverse_lazy, reverse
 from django.views.generic.list import ListView
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.views.generic.detail import DetailView
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import CreateView, FormView, DeleteView
 from django.shortcuts import redirect
 from .filters import RecipeFilter
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
+from django.contrib.auth.decorators import login_required
 
 
 def testPage(request):
@@ -21,8 +24,8 @@ def testPage(request):
 
 
 def dashboard(request):
-    return render(request,
-                  'recipes/recipe/dashboard.html',)
+    template_name = 'navbar/dashboard.html'
+    return render(request, template_name)
 
 
 class RecipesListView(ListView):
@@ -74,3 +77,23 @@ class RecipeDeleteView(DeleteView):
     template_name = 'recipes/recipe/recipe_confirm_delete.html'
 
     success_url = reverse_lazy('recipe:list-recipes')
+
+
+def create_collection(request):
+    template_name = 'navbar/collection/form.html'
+
+    collection_form = CollectionModelForm(request.POST or None)
+
+    if collection_form.is_valid():
+        collection_instance = collection_form.save(commit=False)
+        collection_instance.author = get_object_or_404(
+            User, pk=request.user.pk)
+        collection_instance.save()
+        return redirect('recipe:list-recipes')
+
+    collection_form = CollectionModelForm()
+
+    context = {}
+    context['collection_form'] = collection_form
+
+    return render(request, template_name, context)

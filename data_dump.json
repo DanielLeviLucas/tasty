@@ -1,0 +1,1291 @@
+[
+{
+  "model": "recipe.cuisine",
+  "pk": 1,
+  "fields": {
+    "name": "Korean"
+  }
+},
+{
+  "model": "recipe.cuisine",
+  "pk": 2,
+  "fields": {
+    "name": "Filipino"
+  }
+},
+{
+  "model": "recipe.cuisine",
+  "pk": 3,
+  "fields": {
+    "name": "French"
+  }
+},
+{
+  "model": "recipe.cuisine",
+  "pk": 4,
+  "fields": {
+    "name": "Mediterranean"
+  }
+},
+{
+  "model": "recipe.recipe",
+  "pk": 1,
+  "fields": {
+    "created": "2022-06-29T18:40:57.796Z",
+    "modified": "2022-06-29T18:41:46.074Z",
+    "title": "Filipino Lumpia",
+    "author": 1,
+    "type": "non-veg",
+    "image": "users/2022/06/29/Filipino_Lumpia_sCv9w8d.jpg",
+    "difficulty": 6,
+    "instructions": "Step 1\r\nPlace a wok or large skillet over high heat, and pour in 1 tablespoon vegetable oil. Cook pork, stirring frequently, until no pink is showing. Remove pork from pan and set aside. Drain grease from pan, leaving a thin coating. Cook garlic and onion in the same pan for 2 minutes. Stir in the cooked pork, carrots, green onions, and cabbage. Season with pepper, salt, garlic powder, and soy sauce. Remove from heat, and set aside until cool enough to handle.\r\n\r\nStep 2\r\nPlace three heaping tablespoons of the filling diagonally near one corner of each wrapper, leaving a 1 1/2 inch space at both ends. Fold the side along the length of the filling over the filling, tuck in both ends, and roll neatly. Keep the roll tight as you assemble. Moisten the other side of the wrapper with water to seal the edge. Cover the rolls with plastic wrap to retain moisture.\r\n\r\nStep 3\r\nHeat a heavy skillet over medium heat, add oil to 1/2 inch depth, and heat for 5 minutes. Slide 3 or 4 lumpia into the oil. Fry the rolls for 1 to 2 minutes, until all sides are golden brown. Drain on paper towels. Serve immediately.",
+    "servings": 2,
+    "preparation_time": "5 minutes",
+    "total_time": "30 minutes",
+    "calories": 124,
+    "cuisine": [
+      2
+    ]
+  }
+},
+{
+  "model": "recipe.recipe",
+  "pk": 2,
+  "fields": {
+    "created": "2022-06-29T18:50:26.619Z",
+    "modified": "2022-06-29T18:50:26.619Z",
+    "title": "Octopus salad",
+    "author": 1,
+    "type": "non-veg",
+    "image": "users/2022/06/29/octopus_salad.jpeg",
+    "difficulty": 7,
+    "instructions": "Step 1\r\nPrepare the octopus. Wash it well and place in a pressure cooker with water, a peeled onion and a sprig of parsley. Leave to cook about 20 minutes. Drain the octopus, remove to a plate and cut into pieces.\r\n\r\nStep 2\r\nSeason the octopus with a little salt, pepper, chopped parsley, chopped coriander, the remaining chopped onion and chopped garlic. Drizzle with olive oil and vinegar and mix everything with the help of two forks.\r\n\r\nStep 3 \r\nServe immediately.",
+    "servings": 1,
+    "preparation_time": "5 minutes",
+    "total_time": "30 minutes",
+    "calories": 440,
+    "cuisine": [
+      1
+    ]
+  }
+},
+{
+  "model": "recipe.recipe",
+  "pk": 3,
+  "fields": {
+    "created": "2022-06-29T18:58:27.004Z",
+    "modified": "2022-06-29T19:04:47.638Z",
+    "title": "Rosted potatos",
+    "author": 1,
+    "type": "veg",
+    "image": "users/2022/06/29/Rosted_potato.jpg",
+    "difficulty": 5,
+    "instructions": "Step 1\r\nPreheat the oven to 475 degrees F (245 degrees C).\r\n\r\nStep 2\r\nCombine oil, garlic, basil, marjoram, dill, thyme, oregano, parsley, pepper flakes, and salt in a large bowl; stir in potatoes until evenly coated. Place potatoes in a single layer on a roasting pan or baking sheet.\r\n\r\nStep 3 \r\nRoast in the preheated oven, turning occasionally to brown on all sides, until tender, about 20 to 30 minutes.",
+    "servings": 4,
+    "preparation_time": "4 minutes",
+    "total_time": "20 minutes",
+    "calories": 289,
+    "cuisine": [
+      3
+    ]
+  }
+},
+{
+  "model": "recipe.recipe",
+  "pk": 4,
+  "fields": {
+    "created": "2022-06-29T19:03:14.166Z",
+    "modified": "2022-06-29T19:05:15.558Z",
+    "title": "Salmon Butter Roast",
+    "author": 1,
+    "type": "non-veg",
+    "image": "users/2022/06/29/Salmon_Butter_Roast.jpg",
+    "difficulty": 6,
+    "instructions": "Step 1\r\nPreheat oven to 475 degrees. Place butter on a rimmed baking sheet and season with salt and pepper. Place sheet in oven until butter melts, about 1 minute.\r\n\r\nStep 2\r\nCarefully remove sheet from oven and place salmon on top of butter, skin side down; season with salt and pepper. Return sheet to oven.\r\n\r\nStep 3\r\nRoast until salmon is just cooked through, 8 to 12 minutes, checking frequently. It will flake easily when done. Sprinkle with parsley and serve.",
+    "servings": 2,
+    "preparation_time": "5 minutes",
+    "total_time": "20 minutes",
+    "calories": 554,
+    "cuisine": [
+      4
+    ]
+  }
+},
+{
+  "model": "recipe.recipe",
+  "pk": 8,
+  "fields": {
+    "created": "2022-07-03T08:16:07.296Z",
+    "modified": "2022-07-03T08:16:07.296Z",
+    "title": "test anime",
+    "author": 1,
+    "type": "vegan",
+    "image": "users/2022/07/03/monster.jpg",
+    "difficulty": 3,
+    "instructions": "monster",
+    "servings": 2,
+    "preparation_time": "12",
+    "total_time": "12",
+    "calories": 123,
+    "cuisine": []
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 1,
+  "fields": {
+    "name": "vegetable oil",
+    "quantity": 1,
+    "measurement": "tablespoon",
+    "optional": false,
+    "recipe": 1
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 2,
+  "fields": {
+    "name": "ground pork",
+    "quantity": 1,
+    "measurement": "pound",
+    "optional": false,
+    "recipe": 1
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 3,
+  "fields": {
+    "name": "garlic, crushed",
+    "quantity": 2,
+    "measurement": "cloves",
+    "optional": false,
+    "recipe": 1
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 4,
+  "fields": {
+    "name": "chopped onion",
+    "quantity": 1,
+    "measurement": "cup",
+    "optional": false,
+    "recipe": 1
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 5,
+  "fields": {
+    "name": "minced carrots",
+    "quantity": 1,
+    "measurement": "cup",
+    "optional": false,
+    "recipe": 1
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 6,
+  "fields": {
+    "name": "chopped green onions",
+    "quantity": 1,
+    "measurement": "cup",
+    "optional": false,
+    "recipe": 1
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 7,
+  "fields": {
+    "name": "thinly sliced green cabbage",
+    "quantity": 1,
+    "measurement": "cup",
+    "optional": false,
+    "recipe": 1
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 8,
+  "fields": {
+    "name": "ground black pepper",
+    "quantity": 1,
+    "measurement": "teaspoon",
+    "optional": false,
+    "recipe": 1
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 9,
+  "fields": {
+    "name": "salt",
+    "quantity": 1,
+    "measurement": "pinch",
+    "optional": true,
+    "recipe": 1
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 10,
+  "fields": {
+    "name": "garlic powder",
+    "quantity": 1,
+    "measurement": "teaspoon",
+    "optional": false,
+    "recipe": 1
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 11,
+  "fields": {
+    "name": "soy sauce",
+    "quantity": 1,
+    "measurement": "teaspoon",
+    "optional": false,
+    "recipe": 1
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 12,
+  "fields": {
+    "name": "lumpia wrappers",
+    "quantity": 30,
+    "measurement": "",
+    "optional": false,
+    "recipe": 1
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 13,
+  "fields": {
+    "name": "vegetable oil for frying",
+    "quantity": 2,
+    "measurement": "cups",
+    "optional": false,
+    "recipe": 1
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 14,
+  "fields": {
+    "name": "Octopus",
+    "quantity": 1,
+    "measurement": "Kg",
+    "optional": false,
+    "recipe": 2
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 15,
+  "fields": {
+    "name": "onions",
+    "quantity": 2,
+    "measurement": "medium",
+    "optional": false,
+    "recipe": 2
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 16,
+  "fields": {
+    "name": "Pepper",
+    "quantity": 4,
+    "measurement": "pinch",
+    "optional": false,
+    "recipe": 2
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 17,
+  "fields": {
+    "name": "garlic",
+    "quantity": 3,
+    "measurement": "cloves",
+    "optional": false,
+    "recipe": 2
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 18,
+  "fields": {
+    "name": "Parsley",
+    "quantity": 1,
+    "measurement": "",
+    "optional": false,
+    "recipe": 2
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 19,
+  "fields": {
+    "name": "olive oil",
+    "quantity": 100,
+    "measurement": "ml",
+    "optional": true,
+    "recipe": 2
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 20,
+  "fields": {
+    "name": "vinegar",
+    "quantity": 1,
+    "measurement": "tablespoon",
+    "optional": false,
+    "recipe": 2
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 21,
+  "fields": {
+    "name": "Salt",
+    "quantity": 1,
+    "measurement": "pinch",
+    "optional": false,
+    "recipe": 2
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 22,
+  "fields": {
+    "name": "olive oil",
+    "quantity": 10,
+    "measurement": "ml",
+    "optional": false,
+    "recipe": 3
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 23,
+  "fields": {
+    "name": "minced garlic",
+    "quantity": 1,
+    "measurement": "tablespoon",
+    "optional": false,
+    "recipe": 3
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 24,
+  "fields": {
+    "name": "teaspoon dried basil",
+    "quantity": 1,
+    "measurement": "teaspoon",
+    "optional": false,
+    "recipe": 3
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 25,
+  "fields": {
+    "name": "dried marjoram",
+    "quantity": 1,
+    "measurement": "teaspoon",
+    "optional": false,
+    "recipe": 3
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 26,
+  "fields": {
+    "name": "dried dill weed",
+    "quantity": 1,
+    "measurement": "teaspoon",
+    "optional": false,
+    "recipe": 3
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 27,
+  "fields": {
+    "name": "crushed red pepper flakes",
+    "quantity": 1,
+    "measurement": "teaspoon",
+    "optional": false,
+    "recipe": 3
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 28,
+  "fields": {
+    "name": "teaspoon salt",
+    "quantity": 1,
+    "measurement": "teaspoon",
+    "optional": false,
+    "recipe": 3
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 29,
+  "fields": {
+    "name": "potatoes, peeled and cubed",
+    "quantity": 4,
+    "measurement": "large",
+    "optional": false,
+    "recipe": 3
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 30,
+  "fields": {
+    "name": "unsalted butter",
+    "quantity": 4,
+    "measurement": "tablespoons",
+    "optional": false,
+    "recipe": 4
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 31,
+  "fields": {
+    "name": "Coarse salt and ground pepper",
+    "quantity": 1,
+    "measurement": "small cup",
+    "optional": false,
+    "recipe": 4
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 32,
+  "fields": {
+    "name": "salmon fillet, skin on",
+    "quantity": 3,
+    "measurement": "pounds",
+    "optional": false,
+    "recipe": 4
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 42,
+  "fields": {
+    "name": "apple",
+    "quantity": 1,
+    "measurement": "",
+    "optional": false,
+    "recipe": 8
+  }
+},
+{
+  "model": "recipe.ingredient",
+  "pk": 43,
+  "fields": {
+    "name": "cream",
+    "quantity": 1,
+    "measurement": "cup",
+    "optional": false,
+    "recipe": 8
+  }
+},
+{
+  "model": "recipe.collection",
+  "pk": 2,
+  "fields": {
+    "title": "fdfs",
+    "author": 1,
+    "recipes": []
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2022-06-29T18:18:47.616Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "1",
+    "object_repr": "Korean",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2022-06-29T18:19:37.715Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "2",
+    "object_repr": "Filipino",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2022-06-29T18:20:15.030Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "3",
+    "object_repr": "French",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2022-06-29T18:21:39.887Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "4",
+    "object_repr": "Mediterranean",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2022-06-29T18:40:57.843Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "1",
+    "object_repr": "Filipino Lumpia| veg| recipe.Cuisine.None",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"vegetable oil : 1tablespoon | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"ground pork : 1pound | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"garlic, crushed : 2cloves | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"chopped onion : 1cup | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"minced carrots : 1cup | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"chopped green onions : 1cup | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"thinly sliced green cabbage : 1cup | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"ground black pepper : 1teaspoon | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"salt : 1pinch | True\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"garlic powder : 1teaspoon | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"soy sauce : 1teaspoon | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"lumpia wrappers : 30 | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"vegetable oil for frying : 2cups | False\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2022-06-29T18:41:46.087Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "1",
+    "object_repr": "Filipino Lumpia| non-veg| recipe.Cuisine.None",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Type\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2022-06-29T18:50:26.656Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "2",
+    "object_repr": "Octopus salad| non-veg| recipe.Cuisine.None",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"Octopus : 1Kg | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"onions : 2medium | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"Pepper : 4pinch | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"garlic : 3cloves | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"Parsley : 1 | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"olive oil : 100ml | True\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"vinegar : 1tablespoon | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"Salt : 1pinch | False\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2022-06-29T18:58:27.036Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "3",
+    "object_repr": "Rosted potatos| veg| recipe.Cuisine.None",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"olive oil : 10ml | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"minced garlic : 1tablespoon | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"teaspoon dried basil : 1teaspoon | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"dried marjoram : 1teaspoon | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"dried dill weed : 1teaspoon | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"crushed red pepper flakes : 1teaspoon | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"teaspoon salt : 1teaspoon | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"potatoes, peeled and cubed : 4large | False\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2022-06-29T19:03:14.190Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "4",
+    "object_repr": "Salmon Butter Roast| non-veg| recipe.Cuisine.None",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"unsalted butter : 4tablespoons | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"Coarse salt and ground pepper : 1small cup | False\"}}, {\"added\": {\"name\": \"ingredient\", \"object\": \"salmon fillet, skin on : 3pounds | False\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2022-06-29T19:04:47.656Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "3",
+    "object_repr": "Rosted potatos| veg| recipe.Cuisine.None",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2022-06-29T19:05:15.570Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "4",
+    "object_repr": "Salmon Butter Roast| non-veg| recipe.Cuisine.None",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Image\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2022-06-30T18:30:09.447Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "daniel",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2022-06-30T18:31:58.309Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "daniel",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2022-06-30T18:39:49.341Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "daniel",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2022-07-02T17:43:40.419Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "admin",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2022-07-02T19:43:16.463Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "6",
+    "object_repr": "Paying extra| vegan| recipe.Cuisine.None",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2022-07-02T19:43:16.636Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "5",
+    "object_repr": "Test recipe| veg| recipe.Cuisine.None",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2022-07-02T21:08:11.876Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "7",
+    "object_repr": "Anime| vegan| recipe.Cuisine.None",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2022-07-03T11:07:28.069Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "daniel",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2022-07-03T17:32:38.900Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "1",
+    "object_repr": "test",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2022-07-03T17:32:46.330Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "1",
+    "object_repr": "test",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add cuisine",
+    "content_type": 1,
+    "codename": "add_cuisine"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change cuisine",
+    "content_type": 1,
+    "codename": "change_cuisine"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete cuisine",
+    "content_type": 1,
+    "codename": "delete_cuisine"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view cuisine",
+    "content_type": 1,
+    "codename": "view_cuisine"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add recipe",
+    "content_type": 2,
+    "codename": "add_recipe"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change recipe",
+    "content_type": 2,
+    "codename": "change_recipe"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete recipe",
+    "content_type": 2,
+    "codename": "delete_recipe"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view recipe",
+    "content_type": 2,
+    "codename": "view_recipe"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add ingredient",
+    "content_type": 3,
+    "codename": "add_ingredient"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change ingredient",
+    "content_type": 3,
+    "codename": "change_ingredient"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete ingredient",
+    "content_type": 3,
+    "codename": "delete_ingredient"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view ingredient",
+    "content_type": 3,
+    "codename": "view_ingredient"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add collection",
+    "content_type": 4,
+    "codename": "add_collection"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change collection",
+    "content_type": 4,
+    "codename": "change_collection"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete collection",
+    "content_type": 4,
+    "codename": "delete_collection"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view collection",
+    "content_type": 4,
+    "codename": "view_collection"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 5,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 5,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 5,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 5,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 6,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 6,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 6,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 6,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 7,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 7,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 7,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 7,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 8,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 8,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 8,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 8,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 9,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 9,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 9,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 9,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 10,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 10,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 10,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 10,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$VieHUt2rSZPsSpr601WwY4$cvmbjFoMHnF1mgIGWqShTc+cRQkxkVSk8ypwfgM1Zq8=",
+    "last_login": "2022-07-03T14:59:44.172Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "Admin",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-06-29T18:14:26Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$g3z9EWT5cvQRCeE9fksiVw$A8BX6fj4wdVPLFCYsLI/ccXepwl8Q70NiU+jNUI5Bcw=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "daniel",
+    "first_name": "DANIEL SAM",
+    "last_name": "",
+    "email": "daniel.nptelcourses@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-07-03T11:07:58.082Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$uJ1txQScvCSt5bSstsZQ79$z5ec2XLg9kJEdRLvIDOjM0837ScYdG5wLCQUSzEGpxA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "edho",
+    "first_name": "EDHO",
+    "last_name": "",
+    "email": "daniellevilufdcas@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-07-03T11:12:53.536Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "recipe",
+    "model": "cuisine"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "recipe",
+    "model": "recipe"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "recipe",
+    "model": "ingredient"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "recipe",
+    "model": "collection"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "s6batiseed96529np8bradcrp9v27iif",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8hgIu3fsNZGYgUjWQlHZl_Hdt0oVu7znnvkTCba1pG2VJcxZnocXpdyPkR2k7yHdsty65t3WZSe6KPOiQ157L83K4fwcVR_3WphAWpVUO4KAgTspHhhA8EyOpyYcQCdFHaxxHTeSMRavRAEDWbMX7A-qEN7o:1o814a:xsjeREXh0ki5cPagbFMYpqkG7h4kWR5g_KdLUEHJ33I",
+    "expire_date": "2022-07-17T14:59:44.187Z"
+  }
+}
+]
