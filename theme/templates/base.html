@@ -1,4 +1,5 @@
 {% load static tailwind_tags %}
+{% load tailwind_filters %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,23 +27,21 @@
             <div class="hidden sm:block sm:ml-6">
               <div class="flex space-x-4">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                {% if request.user.username  %}
                 <a
-                  href="{% url "recipe:dashboard" %}"
-                  class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >Dashboard {{ request.user.username }} {{ request.user.pk }}</a
-                >
-                {% endif %}
-                <a
-                  href="{% url "recipe:list-recipes" %}"
-                  class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >Explore</a
+                href="{% url "recipe:list-recipes" %}"
+                class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                >Explore</a
                 >
                 {% if request.user.username  %}
                 <a
-                  href="{% url "recipe:create-collection" %}"
-                  class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >Collections</a
+                href="{% url "recipe:create-collection" %}"
+                class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                >My recipes</a
+                >
+                <a
+                href="{% url "recipe:create-collection" %}"
+                class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                >Collections</a
                 >
                 {% endif %}
               </div>
@@ -261,6 +260,7 @@
         </div>
       </div>
     </nav>
+
     {% block content %}
     {% endblock content %}
   </body>

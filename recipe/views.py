@@ -97,3 +97,13 @@ def create_collection(request):
     context['collection_form'] = collection_form
 
     return render(request, template_name, context)
+
+
+class AuthorRecipe(RecipesListView):
+    template_name = 'recipes/author/author-recipes.html'
+    context_object_name = 'recipes'
+
+    def get_queryset(self):
+        qs = super().get_queryset()
+        qs = qs.filter(author=self.request.user)
+        return qs

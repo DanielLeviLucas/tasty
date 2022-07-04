@@ -56,8 +56,8 @@ class Ingredient(models.Model):
 
 class Collection(models.Model):
     title = models.CharField(max_length=250)
-    author = models.ForeignKey(User, on_delete=models.CASCADE,
-                               related_name='author_collection')
+    author = models.OneToOneField(User, on_delete=models.CASCADE,
+                                  related_name='author_collection')
     recipes = models.ManyToManyField(
         Recipe, related_name='recipe_collections')
 
