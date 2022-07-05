@@ -1,5 +1,4 @@
 {% load static tailwind_tags %}
-{% load tailwind_filters %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +12,7 @@
   </head>
   <body>
     <!-- This example requires Tailwind CSS v2.0+ -->
-    <nav class="bg-gray-800">
+    <nav class="bg-gray-800 sticky top-0 z-10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <div class="flex items-center">
@@ -34,12 +33,17 @@
                 >
                 {% if request.user.username  %}
                 <a
+                href="{% url "recipe:dashboard" %}"
+                class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                >dashboard</a
+                >
+                <a
                 href="{% url "recipe:create-collection" %}"
                 class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
                 >My recipes</a
                 >
                 <a
-                href="{% url "recipe:create-collection" %}"
+                href="{% url "recipe:list-collection" %}"
                 class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
                 >Collections</a
                 >

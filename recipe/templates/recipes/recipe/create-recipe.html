@@ -13,7 +13,7 @@
         >
             {% csrf_token %}
 
-            {{ recipe_form|crispy }}
+            {{ recipe_form.as_p }}
 
             <h2>Ingredients</h2>
 

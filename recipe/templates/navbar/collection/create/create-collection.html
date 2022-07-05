@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Create Collection | Tasty{% endblock title %}
+
+{% block content %}
+<div class="flex items-center justify-center">
+  <form
+      action="{% url "recipe:create-collection" %}"
+      method="post" enctype="multipart/form-data"
+      class="space-y-8 divide-y divide-gray-200"
+  >
+  {% csrf_token %}
+
+  {{ collection_form.as_p }}
+
+  <button
+  type="submit"
+  class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+  >Create
+  </button>
+
+  </form>
+</div>
+{% endblock content %}

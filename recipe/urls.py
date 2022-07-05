@@ -14,4 +14,6 @@ urlpatterns = [
          views.RecipeDeleteView.as_view(), name='recipe-delete'),
     path('collection/create/',
          views.create_collection, name='create-collection'),
+    path('collection/list', views.CollectionListView.as_view(),
+         name='list-collection')
 ]

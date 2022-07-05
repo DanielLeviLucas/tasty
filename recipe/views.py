@@ -80,7 +80,7 @@ class RecipeDeleteView(DeleteView):
 
 
 def create_collection(request):
-    template_name = 'navbar/collection/form.html'
+    template_name = 'navbar/collection/create/create-collection.html'
 
     collection_form = CollectionModelForm(request.POST or None)
 
@@ -93,10 +93,19 @@ def create_collection(request):
 
     collection_form = CollectionModelForm()
 
+    author_filter = Collection.objects.all().filter(author=request.user)
     context = {}
     context['collection_form'] = collection_form
-
     return render(request, template_name, context)
+
+
+class CollectionListView(ListView):
+    model = Collection
+    template_name = 'recipes/author/author-recipe-collection.html'
+    context_object_name = 'collection'
+
+    def get_queryset(self):
+        return Collection.objects.filter(author=self.request.user.pk)
 
 
 class AuthorRecipe(RecipesListView):
@@ -104,6 +113,4 @@ class AuthorRecipe(RecipesListView):
     context_object_name = 'recipes'
 
     def get_queryset(self):
-        qs = super().get_queryset()
-        qs = qs.filter(author=self.request.user)
-        return qs
+        pass

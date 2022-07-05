@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Collection recipe | Tasty{% endblock title %}
+
+{% block content %}
+    {{ collection }}
+    {% for r in collection %}
+        <p>{{ r.title }}</p>
+        <p>{{ r.author }}</p>
+            {% for rec in  r.recipes.all %}
+                <p>{{ rec.image.url }}</p>
+                <p>{{ rec.title }}</p>
+            {% endfor %}
+    {% empty %}
+        {% include 'partials/no-items.html' %}
+    {% endfor %}
+{% endblock content %}
