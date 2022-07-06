@@ -3,6 +3,41 @@
 {% block title %}{{ object.title}} | Tasty{% endblock title %}
 
 {% block content %}
+<div class="relative py-16 bg-white overflow-hidden">
+
+    <div class="relative px-4 sm:px-6 lg:px-8">
+      <div class="text-lg max-w-prose mx-auto">
+        <h1>
+          <span class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">{{ recipe.title }}</span>
+        </h1>
+      </div>
+      <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
+        <figure>
+          <img class="w-full rounded-lg" src="{{ recipe.image.url }}" alt="" width="1310" height="873">
+        </figure>
+        <div class="max-w-4xl mx-auto">
+            <dl class="rounded-lg bg-white shadow-lg sm:grid sm:grid-cols-3">
+              <div class="flex flex-col border-b border-gray-100 p-6 text-center sm:border-0 sm:border-r">
+                <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Pepperoni</dt>
+                <dd class="order-1 text-5xl font-extrabold text-indigo-600">100%</dd>
+              </div>
+              <div class="flex flex-col border-t border-b border-gray-100 p-6 text-center sm:border-0 sm:border-l sm:border-r">
+                <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">Delivery</dt>
+                <dd class="order-1 text-5xl font-extrabold text-indigo-600">24/7</dd>
+              </div>
+              <div class="flex flex-col border-t border-gray-100 p-6 text-center sm:border-0 sm:border-l">
+                <dt class="order-2 mt-2 text-lg leading-6 font-medium text-gray-500">{{ recipe.calories }}</dt>
+                <dd class="order-1 text-5xl font-extrabold text-indigo-600">{{ recipe.calories }}k</dd>
+              </div>
+            </dl>
+          </div>
+        <h2 class="p-1">Ingredients for</h2>
+        <h3>{{ recipe.servings }} servings</h3>
+      </div>
+    </div>
+
+
+
 <ul>
         <li>
             <img src="{{ recipe.image.url }}" alt="img">
