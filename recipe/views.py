@@ -46,7 +46,7 @@ class RecipeDetailView(DetailView):
     context_object_name = 'recipe'
 
 
-def createRecipe(request):
+def create_recipe(request):
     template_name = 'recipes/recipe/create-recipe.html'
 
     recipe_form = RecipeModelForm(request.POST or None, request.FILES)
