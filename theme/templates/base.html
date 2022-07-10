@@ -11,7 +11,6 @@
     <script src="//unpkg.com/alpinejs" defer></script>
   </head>
   <body>
-    <!-- This example requires Tailwind CSS v2.0+ -->
     <nav class="bg-gray-800 sticky top-0 z-10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
@@ -28,23 +27,50 @@
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <a
                 href="{% url "recipe:list-recipes" %}"
-                class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                class="
+                {% if request.path == "/recipes/list-recipes/" %}
+                bg-gray-500 text-white px-3 py-2 rounded-md text-sm font-medium
+                {% else %}
+                text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium hover:text-white
+                {% endif %}
+                "
                 >Explore</a
                 >
+
                 {% if request.user.username  %}
                 <a
                 href="{% url "recipe:dashboard" %}"
-                class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                class="
+                {% if request.path == "/recipes/dashboard/" %}
+                bg-gray-500 text-white px-3 py-2 rounded-md text-sm font-medium
+                {% else %}
+                text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium hover:text-white
+                {% endif %}
+                "
                 >dashboard</a
                 >
+
                 <a
                 href="{% url "recipe:create-collection" %}"
-                class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                class="
+                {% if request.path == "/recipes/collection/create/" %}
+                bg-gray-500 text-white px-3 py-2 rounded-md text-sm font-medium
+                {% else %}
+                text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium hover:text-white
+                {% endif %}
+                "
                 >My recipes</a
                 >
+
                 <a
                 href="{% url "recipe:list-collection" %}"
-                class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                class="
+                {% if request.path == "/recipes/collection/list" %}
+                bg-gray-500 text-white px-3 py-2 rounded-md text-sm font-medium
+                {% else %}
+                text-gray-300 hover:bg-gray-700 px-3 py-2 rounded-md text-sm font-medium hover:text-white
+                {% endif %}
+                "
                 >Collections</a
                 >
                 {% endif %}
