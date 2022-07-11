@@ -78,12 +78,40 @@ def create_recipe(request):
     return render(request, template_name, context)
 
 
+
+def edit_recipe(request, id=None):
+    template_name = 'recipes/recipe/edit/edit-recipe.html'
+
+    recipe_obj = get_object_or_404(Recipe, id=id, author=request.user)
+    recipe_form = RecipeModelForm(request.POST or None, request.FILES, instance=recipe_obj)
+    recipe_ingredient_formset = modelformset_factory(Ingredient,
+                                         fields=('name', 'quantity',
+                                                 'measurement', 'optional'),
+                                         extra=0)
+    qs = recipe_obj.recipe_ingredients.all()
+
+    formset = recipe_ingredient_formset(request.POST or None, queryset=qs)
+    context = {
+        "recipe_form": recipe_form,
+        "formset": formset,
+        "recipe_obj": recipe_obj
+
+    }
+
+    if recipe_form.is_valid() and formset.is_valid():
+        recipe_instance = recipe_form.save(commit=False)
+        recipe_instance.save()
+        for form in formset:
+            ingredient_instance = form.save(commit=False)
+            ingredient_instance.recipe = recipe_instance
+            ingredient_instance.save()
+    return render(request, template_name, context)
+
 class RecipeDeleteView(DeleteView):
     model = Recipe
     template_name = 'recipes/recipe/recipe_confirm_delete.html'
 
     success_url = reverse_lazy('recipe:list-recipes')
-
 
 def create_collection(request):
     template_name = 'navbar/collection/create/create-collection.html'
