@@ -99,7 +99,6 @@ def create_collection(request):
 
     collection_form = CollectionModelForm()
 
-    author_filter = Collection.objects.all().filter(author=request.user)
     context = {}
     context['collection_form'] = collection_form
     return render(request, template_name, context)
