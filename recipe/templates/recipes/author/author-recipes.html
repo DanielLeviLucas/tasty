@@ -1,1 +1,18 @@
-{% include "recipes/recipes-list.html" %}
+{% extends "base.html" %}
+
+{% block title %}Your recipes | Tasty{% endblock title %}
+
+{% block content %}
+<div class="bg-white">
+  <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-5">
+    {% include 'partials/header.html' %}
+      <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
+        {% for recipe in filter.qs %}
+            {% include 'partials/recipe-item.html' %}
+         {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
