@@ -39,6 +39,12 @@ class RecipesListView(ListView):
                                          queryset=self.get_queryset())
         return context
 
+class AuthorRecipe(LoginRequiredMixin, RecipesListView):
+    template_name = 'recipes/author/author-recipes.html'
+
+    def get_queryset(self):
+        return Recipe.objects.filter(author=self.request.user.pk)
+
 
 class RecipeDetailView(DetailView):
     model = Recipe
@@ -99,7 +105,7 @@ def create_collection(request):
     return render(request, template_name, context)
 
 
-class CollectionListView(ListView):
+class AuthorCollectionListView(ListView):
     model = Collection
     template_name = 'recipes/author/author-recipe-collection.html'
     context_object_name = 'collection'
@@ -107,10 +113,8 @@ class CollectionListView(ListView):
     def get_queryset(self):
         return Collection.objects.filter(author=self.request.user.pk)
 
+class CollectionListView(ListView):
+    model = Collection
+    template_name = 'recipes/recipe-collection.html'
+    context_object_name = 'collection'
 
-class AuthorRecipe(RecipesListView):
-    template_name = 'recipes/author/author-recipes.html'
-    context_object_name = 'recipes'
-
-    def get_queryset(self):
-        pass

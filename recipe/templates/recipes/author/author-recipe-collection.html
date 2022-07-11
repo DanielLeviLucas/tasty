@@ -3,15 +3,29 @@
 {% block title %}Collection recipe | Tasty{% endblock title %}
 
 {% block content %}
-    {{ collection }}
-    {% for r in collection %}
-        <p>{{ r.title }}</p>
-        <p>{{ r.author }}</p>
-            {% for rec in  r.recipes.all %}
-                <p>{{ rec.image.url }}</p>
-                <p>{{ rec.title }}</p>
-            {% endfor %}
-    {% empty %}
-        {% include 'partials/no-items.html' %}
-    {% endfor %}
+
+{% if not collection %}
+    {% include 'partials/no-items.html' with message='You have no collection' %}
+{% else %}
+
+{% include "partials/header.html" %}
+<div class="bg-white">
+  <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-5">
+    <ul
+      role="list"
+      class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8"
+    >
+      {% for collection_item in collection %}
+      {% for recipe in collection_item.recipes.all %}
+          {% include 'partials/recipe-item.html' %}
+    </ul>
+  </div>
+</div>
+{% empty %}
+  {% include 'partials/no-items.html' with message='Your collection have no recipes yet' %}
+{% endfor %}
+{% endfor %}
+
+{% endif %}
+
 {% endblock content %}
